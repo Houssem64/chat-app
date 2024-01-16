@@ -7,7 +7,7 @@ export default function Register() {
   return (
     <>
       <div className="flex items-center justify-center h-screen bg-black">
-        <form action="POST" className="w-64 mx-auto">
+        <form action="POST" className="w-64 mx-auto" onSubmit={register}>
           <img src={logo} alt="logo" className="block w-auto h-auto p-2 mb-2" />
           <input
             value={username}
