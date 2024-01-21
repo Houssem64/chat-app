@@ -13,6 +13,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.16",
     "axios": "^1.6.5",
+    "cors": "^2.8.5",
     "css": "^3.0.0",
     "postcss": "^8.4.33",
     "react": "^18.2.0",

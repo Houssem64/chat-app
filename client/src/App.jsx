@@ -1,12 +1,16 @@
-import { useState } from 'react'  
-import Register from './register'
+import React from 'react';
 import axios from 'axios';
+import { UserContextProvider } from './userContext';
+import Routes from './routes';
 function App() {
 axios.defaults.baseURL = 'http://localhost:4000'
 axios.defaults.withCredentials = true;
+
   return (
     <>
-    <Register/>
+   <UserContextProvider>
+   <Routes/>
+   </UserContextProvider>
     </>
   )
 }
