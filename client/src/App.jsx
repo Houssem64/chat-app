@@ -5,6 +5,7 @@ import Routes from './routes';
 function App() {
 axios.defaults.baseURL = 'http://localhost:4000'
 axios.defaults.withCredentials = true;
+axios.defaults.secure = false;
 
   return (
     <>

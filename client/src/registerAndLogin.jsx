@@ -13,6 +13,7 @@ export default function RegisterAndLogin() {
     const { data } = await axios.post(url, { username, password });
     setLoggedInUsername(username);
     setId(data.id);
+    
  }
 
  return (
