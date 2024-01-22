@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import { UserContext } from "./userContext"
+import { UserContext } from "./UserContext"
 
 export default function RegisterAndLogin() {
  const [username, setUsername] = useState("");
