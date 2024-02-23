@@ -6,9 +6,15 @@ export default function chat() {
         const ws = new WebSocket('ws://localhost:4000')
         setWs(ws);
         ws.addEventListener('message', handleMessage )
-    }, [])
-    function handleMessage(e) { 
-        console.log('new message', e)
+    }, [])  
+    function  showOnlineUser(onlineUser) { 
+console.log(onlineUser)
+    }
+    function handleMessage(ev) { 
+      const messageData = JSON.parse(ev.data)
+   if ('online' in messageData) { 
+    showOnlineUser(messageData.online)
+   }
     }
   return (
     <>

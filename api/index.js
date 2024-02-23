@@ -107,7 +107,7 @@ wss.on('connection', (connection,req)=> {
 }
 [...wss.clients].forEach(client => {
   client.send(JSON.stringify(
-    [...wss.clients].map(c => ({ userId: c.userId, username: c.username }))
+   {online: [...wss.clients].map(c => ({ userId: c.userId, username: c.username })) } 
   ));
 });
 
